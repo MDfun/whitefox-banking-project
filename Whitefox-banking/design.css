@@ -1,0 +1,1675 @@
+* {
+    box-sizing: border-box;
+}
+body, html{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.h1-main {
+    color: black;
+}
+/*-----------------------------main_panel-----------------------------------*/
+/*Navbar*/
+.navbar_own{
+    position: sticky;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    z-index: 100;
+    height: 10vh;
+    display: flex;
+}
+.navbar_own_color{
+    position: absolute;
+    opacity: 98%;
+    height: 10vh;
+    width: 100%;
+    background-color: ghostwhite;
+}
+.navbar_own_img_control {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+.navbar_own_img {
+    position: relative;
+    height: 40%;
+    width: auto;
+    left: 30vh;
+    cursor: pointer;
+}
+.navbar_own_buttons{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.navbar_own_buttons button{
+    opacity: 100%;
+    position: relative;
+    margin-right: 1%;
+    right: 30vh;
+    height: 40%;
+    width: 15%;
+    border: 0;
+    border-radius: 1.5vh;
+    font-size: 2vh;
+}
+.navbar_own_button1 {
+    background-color: #d9d9d9;
+    color: black;
+    transition: 0.2s;
+}
+.navbar_own_button2{
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    transition: 0.2s;
+}
+.navbar_own_button1:hover{
+    filter: invert(10%);
+}
+.navbar_own_account{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 50%;
+    height: 100%;
+}
+.navbar_own_account_button_control{
+    display: flex;
+    justify-content: center;
+    margin-right: 30vh;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.navbar_own_account_button_control button{
+    border: 0;
+    border-radius: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    height: 40%;
+    background-color: inherit;
+}
+.navbar_own_account_button_dropdown_content {
+    position: absolute;
+    width: 25vh;
+    top: 12vh;
+    right: 30vh;
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    background-color: ghostwhite;
+    border-radius: 2vh;
+    padding-bottom: 0.8vh;
+    padding-top: 0.8vh;
+    padding-right: 1vh;
+    font-family: Main;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    animation-name: dropdown_animation;
+    animation-duration: 0.5s;
+    z-index: 0;
+}
+.navbar_own_account_button_dropdown_content a{
+    color: black;
+    text-decoration: none;
+}
+.end_animations_dropdown{
+    position: absolute;
+    width: 25vh;
+    top: -5vh;
+    right: 30vh;
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    background-color: ghostwhite;
+    border-radius: 2vh;
+    padding-bottom: 0.8vh;
+    padding-top: 0.8vh;
+    padding-right: 1vh;
+    font-family: Main;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    animation-name: gopup_animation;
+    animation-duration: 0.5s;
+    z-index: 0;
+}
+@keyframes dropdown_animation {
+    0% {top: -5vh; opacity: 0}
+    25% {opacity: 0}
+    100% {top: 12vh; opacity: 100}
+}
+@keyframes gopup_animation {
+    0% {top: 12vh; opacity: 100}
+    25% {opacity: 0}
+    100% {top: -5vh; opacity: 0}
+}
+
+
+
+
+
+
+
+
+
+.welcome_top{
+    position: relative;
+    overflow: hidden;
+    background-color: #0678e6;
+    height: 100vh;
+    animation-name: start;
+    animation-duration: 1.5s;
+}
+.welcome_top h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    font-size: 8em;
+    font-family: Main;
+}
+/*Header animation*/
+@keyframes start {
+    0% {height: 0vh;}
+    100% {height: 100vh;}
+}
+/*Content*/
+.main_panel_row{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 1%;
+    width: 100%;
+    justify-content: center;
+}
+.main_panel_card{
+    height: 40vh;
+    width: 30vh;
+    margin: 1%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family: Main2;
+    border-radius: 2vh;
+    background-color: white;
+    overflow: hidden;
+}
+.main_panel_card a{
+    display: block;
+    text-decoration: none;
+    height: 85%;
+}
+.main_panel_card_img{
+    position: relative;
+    left: -25%;
+    height: 100%;
+    width: 150%;
+}
+.main_panel_card_color {
+    position: relative;
+    left: -25%;
+    height: 100%;
+    width: 150%;
+}
+.main_panel_card_bottom{
+    position: relative;
+    top: -30%;
+    z-index: 5;
+    height: 70%;
+    width: 100%;
+    background-color: white;
+    border-radius: 50px 0px 0px 0px;
+    transition: 0.2s;
+    overflow: hidden;
+}
+.main_panel_card:hover .main_panel_card_bottom{
+    top: -70%;
+}
+.main_panel_card:hover .main_panel_card_bottom_options{
+    bottom: 0%;
+}
+.main_panel_card_bottom h1 {
+    position: relative;
+    min-font-size: 3vh;
+    max-font-size: 5vh;
+    color: black;
+    font-family: Cool;
+    height: 60%;
+    width: 85%;
+    margin: 0;
+    left: 15%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+}
+.main_panel_card:hover .main_panel_card_bottom_h1_2 h1{
+    overflow: visible;
+    transition: all 0.5s ease-out;
+    animation: card_h1_roll 5s infinite linear;
+}
+@keyframes card_h1_roll {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-155%);
+    }
+    50.01% {
+        transform: translateX(155%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.main_panel_card_bottom_h1{
+    position: relative;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.main_panel_card_bottom_h1_2{
+    position: relative;
+    width: 100%;
+    height: 45%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.main_panel_card_bottom p{
+    color: black;
+    font-family: Main;
+    position: relative;
+    width: 100%;
+    left: 5%;
+}
+.main_panel_card_bottom_p{
+    position: relative;
+    width: 100%;
+    height: 35%;
+    padding-right: 1vh;
+}
+.main_panel_card_bottom_options{
+    position: relative;
+    margin-top: 0;
+    height: 15%;
+    padding-left: 5%;
+    display: flex;
+    flex-direction: row;
+    z-index: 100;
+    align-items: center;
+    bottom: -20%;
+    transition: 0.2s;
+}
+.main_panel_card_bottom_options button{
+    position: relative;
+    background-color: inherit;
+    height: 80%;
+    border: none;
+    transition: 0.1s ease-in-out;
+}
+.main_panel_card_bottom_options button:hover{
+    border-bottom: 0.5vh solid black;
+}
+/*Add Card*/
+.main_panel_addcard {
+    background-color: gray;
+    height: 40vh;
+    width: 30vh;
+    margin: 1%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-family: Main2;
+    border-radius: 2vh;
+    overflow: hidden;
+}
+.main_panel_addcard_href {
+    position: absolute;
+    height: 40vh;
+    width: 30vh;
+    color: darkslategray;
+    text-decoration: none;
+}
+.main_panel_addcard_href h1{
+    position: absolute;
+    font-size: 25vh;
+    line-height: 40vh;
+    width: 30vh;
+    text-align: center;
+    transition: 0.2s;
+}
+.main_panel_addcard_href p{
+    opacity: 0;
+    position: absolute;
+    font-size: 4vh;
+    line-height: 40vh;
+    width: 30vh;
+    text-align: center;
+    top: 10%;
+    transition: 0.2s;
+    z-index: 1;
+}
+.main_panel_addcard_href p:hover {
+    opacity: 100%;
+}
+.main_panel_addcard_href h1:hover {
+    line-height: 35vh;
+}
+.main_panel_addcard_function{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.51);
+    z-index: 200;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.main_panel_addcard_function_card {
+    width: 40vh;
+    height: 55vh;
+    background-color: white;
+    border-radius: 2vh;
+    transition: 2s;
+    overflow: hidden;
+}
+.main_panel_addcard_function_card_close_control{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+.main_panel_addcard_function_card_close{
+    position: relative;
+    background-color: inherit;
+    border: 0;
+    margin-right: 1vh;
+    transition: 0.5s;
+}
+.main_panel_addcard_function_card form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+.main_panel_addcard_function_card_form1{
+    position: relative;
+    top: 5%;
+    width: 80%;
+    font-size: 5vh;
+    text-align: center;
+    margin-bottom: 10%;
+    font-family: Cool;
+}
+.main_panel_addcard_function_card_form2 {
+    position: relative;
+    top: 5%;
+    height: 30%;
+    width: 80%;
+    padding-bottom: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+}
+.main_panel_addcard_function_card_color_pick_control{
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.main_panel_addcard_function_card_color_pick_control p{
+    margin: 0;
+    font-size: 2vh;
+}
+.main_panel_addcard_function_card_color_pick{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: inherit;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 2vh;
+    font-size: 2.5vh;
+    width: 25%;
+}
+.main_panel_addcard_function_card_currency_pick{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    background-color: inherit;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: 4.2vh;
+    font-size: 2.5vh;
+    width: 25%;
+}
+.main_panel_addcard_function_card_color_pick:hover{
+    border-bottom: solid black 0.3vh;
+}
+.main_panel_addcard_function_card_currency_pick:hover{
+    border-bottom: solid black 0.3vh;
+}
+.main_panel_addcard_function_card form button{
+    position: relative;
+    top: 5%;
+    border-radius: 20px;
+    width: 80%;
+    background-color: #0678E6;
+    color: white;
+    height: 6vh;
+    border: 0;
+    font-size: 2vh;
+    transition: 0.2s;
+}
+.main_panel_addcard_function_card form button:hover{
+    background-color: #4CA6FA;
+}
+/*-----------------------------main_panel_banned----------------------------------*/
+.main_panel_banned_text{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+}
+.main_panel_banned_text h1{
+    position: relative;
+    font-family: Cool;
+    margin-top: 2vh;
+    margin-bottom: 0;
+}
+.main_panel_banned_text p{
+    position: relative;
+    width: 25%;
+    text-align: center;
+}
+.main_panel_user_edited_successfully{
+    position: relative;
+    width: 100%;
+    height: 5.5vh;
+    background-color: green;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    animation-fill-mode: forwards;
+    animation-name: user_edited_successfully_animation;
+    animation-duration: 1s;
+    animation-delay: 3s;
+}
+.main_panel_user_edited_successfully p{
+    position: relative;
+    margin: 0;
+    color: white;
+    left: 30vh;
+    width: 100vh;
+}
+@keyframes user_edited_successfully_animation {
+    0% {height: 5.5vh}
+    100% {height: 0; padding: 0}
+}
+/*-----------------------------main_panel_admin-----------------------------------*/
+.main_panel_admin_all_control {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+.main_panel_admin_table_control {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.main_panel_admin_table_control table{
+    position: relative;
+    top: 5vh;
+    border-radius: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    overflow: hidden;
+    width: 80%;
+}
+.main_panel_admin_table_control table th{
+    width: 18%;
+    padding: 2vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.92);
+    color: white;
+}
+.main_panel_admin_table_control table tr:nth-child(even) td {
+    background-color: #f2f2f2;
+    text-align: center;
+    height: 5vh;
+}
+.main_panel_admin_table_control table tr:nth-child(odd) td {
+    background-color: #fff;
+    text-align: center;
+    height: 5vh;
+}
+/*-----------------------------index_page-----------------------------------*/
+.index_all_control{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+.index_header {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.index_header h1{
+    font-family: Cool;
+    position: relative;
+    width: 100%;
+    font-size: 13vh;
+    text-align: center;
+}
+.index_header b{
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+}
+.index_header p{
+    position: relative;
+    font-size: 3vh;
+    text-align: center;
+}
+.index_header_button {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.index_header_button button{
+    border-radius: 20px;
+    width: 30%;
+    background-color: #0678E6;
+    color: white;
+    height: 6vh;
+    border: 0;
+    font-size: 2vh;
+    transition: 0.2s;
+}
+.index_header_button button:hover{
+    background-color: #4CA6FA;
+}
+.index_coin_img1 {
+    position: absolute;
+    height: 12vh;
+    right: 20%;
+    bottom: 45%;
+    animation-name: coin1;
+    animation-duration: 0.7s;
+}
+.index_coin_img2 {
+    position: absolute;
+    height: 12vh;
+    left: 27%;
+    bottom: 57%;
+    animation-name: coin2;
+    animation-duration: 1.2s;
+}
+.index_coin_img3 {
+    position: absolute;
+    height: 12vh;
+    left: 20%;
+    bottom: 32%;
+    animation-name: coin3;
+    animation-duration: 1s;
+}
+.index_benefit {
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+.index_benefit_text1 {
+    position: relative;
+    margin-top: 5%;
+}
+.index_benefit_text1 h1{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-family: Cool;
+    font-size: 6vh;
+    margin-bottom: 5%;
+}
+.index_benefit_text1 p{
+    display: flex;
+    position: relative;
+    top: 20%;
+    justify-content: center;
+    opacity: 80%;
+    font-size: 2vh;
+}
+.index_benefit_card_align {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.index_benefit_card_two_cards {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.index_benefit_card_align_one_card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.index_benefit_card1 {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: #D81E5B;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.index_benefit_card1 a{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s;
+}
+.index_benefit_card1_img{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    width: 50%;
+    transition: 0.5s;
+}
+.index_benefit_card1:hover .index_benefit_card1_img_bank{
+    height: 120%;
+    width: 120%;
+}
+.index_benefit_card1:hover .index_benefit_card1_img_coin{
+    height: 35vh;
+}
+.index_benefit_card1:hover .index_benefit_card1_line{
+    right: -25%;
+}
+.index_benefit_card1_img_bank{
+    position: relative;
+    height: 100%;
+    right: -22%;
+    transition: 0.5s;
+    width: 100%;
+}
+.index_benefit_card1_img_coin {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    right: -15%;
+    top: 40%;
+    transition: 0.5s;
+}
+.index_benefit_card1_line{
+    position: absolute;
+    top: 10vh;
+    right: -45%;
+    width: 200%;
+    height: 80%;
+    transition: 0.5s;
+}
+.index_benefit_card1_text {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.index_benefit_card1_text_control{
+    position: relative;
+    color: white;
+    width: 75%;
+    left: 5vh;
+}
+.index_benefit_card1_text h1{
+    position: relative;
+    font-family: Cool;
+    font-size: 8vh;
+}
+.index_benefit_card1_text p{
+    position: relative;
+}
+
+
+.index_benefit_card2 {
+    position: relative;
+    width: 50%;
+    height: 30vh;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    margin-top: 1%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    overflow: hidden;
+}
+.index_benefit_card2 a{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+.index_benefit_card2_text{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.index_benefit_card2_text h1{
+    position: relative;
+    font-family: Cool;
+    left: 5vh;
+    color: #0678E6;
+}
+.index_benefit_card2_img{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.index_benefit_card2_img_reset {
+    position: relative;
+    width: 27.5vh;
+    height: 27.5vh;
+    right: -10%;
+    transition: 0.5s;
+}
+.index_benefit_card2:hover .index_benefit_card2_img_reset{
+    width: 34vh;
+    height: 34vh;
+}
+
+.index_benefit_card3 {
+    position: relative;
+    width: 50%;
+    height: 30vh;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    overflow: hidden;
+}
+.index_benefit_card3 a{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+}
+.index_benefit_card3_text{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.index_benefit_card3_text h1{
+    position: relative;
+    font-family: Cool;
+    left: 5vh;
+    color: #0678E6;
+}
+.index_benefit_card3_img{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.index_benefit_card3_img h1{
+    position: relative;
+    color: black;
+    font-size: 32vh;
+    margin: 0;
+    color: #0678E6;
+    transition: 0.5s;
+    bottom: 5%;
+}
+.index_benefit_card3_img b{
+    transition: 0.5s;
+}
+.index_benefit_card3_img_increase{
+    position: absolute;
+    height: 30vh;
+    top: 80%;
+    transition: 0.5s;
+}
+.index_benefit_card3:hover .index_benefit_card3_img h1{
+    bottom: 100%;
+}
+.index_benefit_card3:hover .index_benefit_card3_img_increase{
+    top: 0%;
+}
+
+/*--------------------------Footer-------------------------------*/
+.index_footer_all_control{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: end;
+}
+.index_footer{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.92);
+    width: 100%;
+    margin-top: 5%;
+}
+.index_footer_logo_align{
+    width: 100%;
+}
+.index_footer_logo {
+    position: relative;
+    width: 30vh;
+    filter: invert(100%);
+    left: 10%;
+    margin-top: 1%;
+}
+.index_footer_text {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 1%;
+}
+.index_footer p {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    font-size: 1.5vh;
+}
+/*-----------------------------login_form--------------------------------------*/
+.login_all_control{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+    overflow: visible;
+    height: 90vh;
+}
+.login_card {
+    border-radius: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 80%;
+    flex-direction: column;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.login_card_icon {
+    height: 10vh;
+}
+.login_card h1{
+    text-align: center;
+    width: 100%;
+    font-family: Cool;
+    font-size: 10vh;
+}
+.login_card form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Main;
+}
+.login_card form input{
+    width: 55%;
+    height: 5vh;
+    margin-bottom: 1%;
+    border: 0;
+    border-bottom: 0.4vh solid black;
+    font-family: Main;
+    font-size: 2vh;
+}
+.login_card form input:focus{
+    outline: none;
+}
+.login_card form button{
+    width: 55%;
+    height: 5vh;
+    border-radius: 20px;
+    background-color: #0678E6;
+    color: white;
+    border: 0;
+    font-size: 2vh;
+    transition: 0.2s;
+    margin-top: 5%;
+}
+.login_card form button:hover{
+    background-color: #4CA6FA;
+}
+.login_card a{
+    text-align: center;
+    font-family: Main;
+    margin-top: 1%;
+    color: inherit;
+}
+/*------------------------forgot_password_form-----------------------------*/
+.password_reset_card{
+    position: relative;
+    min-height: 50%;
+    width: 50%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5vh;
+}
+.password_reset_card form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.password_reset_card input{
+    width: 55%;
+    height: 5vh;
+    margin-bottom: 1%;
+    border: 0;
+    border-bottom: 0.4vh solid black;
+    font-family: Main;
+    font-size: 2vh;
+}
+.password_reset_card input:focus{
+    outline: none;
+}
+.password_reset_card button{
+    width: 55%;
+    height: 5vh;
+    border-radius: 20px;
+    background-color: #0678E6;
+    color: white;
+    border: 0;
+    font-size: 2vh;
+    transition: 0.2s;
+    margin-top: 2%;
+}
+/*------------------------register_form-----------------------------*/
+.register_all_control{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+    overflow: visible;
+    height: 90vh;
+}
+.register_card{
+    border-radius: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 80%;
+    flex-direction: column;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.register_card h1{
+    text-align: center;
+    width: 100%;
+    font-family: Cool;
+    font-size: 10vh;
+    margin: 1%;
+}
+.register_card form{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: Main;
+}
+.register_card form input{
+    width: 55%;
+    height: 5vh;
+    margin-bottom: 1%;
+    border: 0;
+    border-bottom: 0.4vh solid black;
+    font-family: Main;
+    font-size: 2vh;
+}
+.register_card form input:focus{
+    outline: none;
+}
+.register_card form button{
+    width: 55%;
+    height: 5vh;
+    border-radius: 2vh;
+    background-color: #0678E6;
+    color: white;
+    border: 0;
+    font-size: 2vh;
+    transition: 0.2s;
+    margin-top: 5%;
+    cursor: pointer;
+}
+.register_card form button:hover{
+    background-color: #4CA6FA;
+}
+.register_card a{
+    text-align: center;
+    font-family: Main;
+    margin-top: 1%;
+    color: inherit;
+}
+.register_warning{
+    position: absolute;
+    width: 100%;
+    top: 76%;
+    text-align: center;
+    font-size: 1.8vh;
+    display: none;
+    z-index: 100;
+    animation: register_warning 0.5s forwards;
+}
+@keyframes register_warning{
+    0%{position: absolute; width: 100%; top: 76%; text-align: center; font-size: 1.8vh; display: none; z-index: 100; right: 0%}
+    20%{position: absolute; width: 100%; top: 76%; text-align: center; font-size: 1.8vh; display: none; z-index: 100; right: 1%;}
+    40%{position: absolute; width: 100%; top: 76%; text-align: center; font-size: 1.8vh; display: none; z-index: 100; right: -1%;}
+    60%{position: absolute; width: 100%; top: 76%; text-align: center; font-size: 1.8vh; display: none; z-index: 100; right: 1%;}
+    80%{position: absolute; width: 100%; top: 76%; text-align: center; font-size: 1.8vh; display: none; z-index: 100; right: -1%;}
+    100%{position: absolute; width: 100%; top: 76%; text-align: center; font-size: 1.8vh; display: none; z-index: 100; right: 0%}
+}
+/*--------------------register_confirm_form----------------*/
+.register_confirm_card{
+    border-radius: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 80%;
+    flex-direction: column;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.register_confirm_card h1{
+    font-family: Cool;
+    margin-top: 1vh;
+}
+.register_confirm_card button{
+    width: 55%;
+    height: 5vh;
+    border-radius: 2vh;
+    background-color: #0678E6;
+    color: white;
+    border: 0;
+    font-size: 2vh;
+    transition: 0.2s;
+}
+.register_confirm_card button:hover{
+    background-color: #4CA6FA;
+}
+@keyframes coin1 {
+    0% {right: 20%; bottom: -20%; opacity: 0;}
+    100% {right: 20%; bottom: 45%; opacity: 100%;}
+}
+@keyframes coin2 {
+    0% {left: 27%; bottom: -20%; opacity: 0;}
+    100% {left: 27%; bottom: 57%; opacity: 100%;}
+}
+@keyframes coin3 {
+    0% {left: 20%; bottom: -20%; opacity: 0;}
+    50% {left: 20%; bottom: 10%; opacity: 5%;}
+    100% {right: 20%; bottom: 32%; opacity: 100%;}
+}
+/*-----------------------------account_webpage-----------------------------------*/
+.account_all_control{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: visible;
+    font-family: Cool;
+}
+.account_maincard_mid_graph_control1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2vh;
+}
+.account_maincard_mid_graph_control2{
+    position: relative;
+    display: flex;
+    max-width: 90%;
+    font-family: Cool;
+    width: 140%;
+    border: black 1px;
+    justify-content: center;
+    border-radius: 2vh;
+    transition: 0.5s;
+}
+.account_card_name{
+    left: 25%;
+    position: relative;
+    margin-top: 2vh;
+    font-family: Cool;
+    width: 50%;
+}
+.account_maincard{
+    position: relative;
+    display: flex;
+    width: 50%;
+    min-height: 70vh;
+    max-height: 110vh;
+    background-color: white;
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 2vh;
+    flex-direction: column;
+    margin-bottom: 8vh;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    padding-bottom: 2vh;
+}
+.account_maincard_top{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vh;
+}
+.account_maincard_top h1{
+    position: relative;
+    font-family: Cool;
+    top: 2vh;
+    left: 2vh;
+    font-size: 5vh;
+    margin-right: 2vh;
+}
+.account_maincard_top p{
+    position: relative;
+    font-size: 3vh;
+    top: 3.28vh;
+    margin: 0;
+}
+.account_maincard_top_money {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vh;
+}
+.account_maincard_top_buttons {
+    position: relative;
+    width: 100%;
+    left: 2vh;
+}
+.account_maincard_top_buttons form a{
+    display: none;
+    transition: 0.2s;
+}
+.account_maincard_top_buttons form a:hover{
+    color: black;
+}
+.account_maincard_top_buttons button{
+    background-color: #e3e3e3;
+    border-radius: 2vh;
+    width: 20%;
+    height: 5vh;
+    border: 0;
+    color: #0678E6;
+    transition: 0.2s;
+}
+.account_maincard_top_buttons button:hover{
+    background-color: #c0c0c0;
+}
+.account_maincard_top_buttons input{
+    border: 0;
+    border-bottom: 0.4vh solid black;
+    display: none;
+}
+.account_button_add_money_php{
+    display: none;
+    margin-left: 2vh;
+}
+.account_button_send_money_php{
+    display: none;
+    margin-left: 2vh;
+}
+.account_maincard_mid {
+
+}
+.account_maincrad_mid_tittle{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+}
+.account_maincrad_mid_tittle p{
+    position: relative;
+    left: 5%;
+    margin: 0;
+    width: 86%;
+    display: flex;
+    justify-content: left;
+}
+.account_maincrad_mid_tittle a{
+    position: relative;
+    margin: 0;
+    justify-content: right;
+    color: black;
+}
+.account_maincard_mid_transactions {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.account_maincard_mid_transactions_card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border-radius: 2vh;
+    align-items: center;
+    padding-bottom: 1vh;
+}
+.account_maincard_mid_transactions_card_bubble {
+    height: 10vh;
+    width: 98%;
+    border-radius: 2vh;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.account_maincard_mid_transactions_card_bubble_empty{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.account_maincard_mid_transactions_card_bubble_empty p{
+    opacity: 70%;
+    margin-top: 5%;
+    font-family: Cool;
+}
+.account_maincard_mid_transactions_card_bubble a{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding-left: 2vh;
+    align-items: center;
+    font-family: Cool;
+    color: black;
+    font-size: 3vh;
+    text-decoration: none;
+}
+.account_maincard_mid_transactions_card_bubble_p1{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-family: Cool;
+    color: black;
+    font-size: 3vh;
+    margin-bottom: 0;
+    padding-right: 1vh;
+    text-decoration-line: none;
+}
+.account_maincard_mid_transactions_card_bubble_p2{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-family: Cool;
+    color: black;
+    font-size: 3vh;
+    margin-bottom: 0;
+}
+.account_maincard_mid_transactions_card_bubble_date{
+    position: relative;
+    margin-bottom: 0;
+    font-size: 2vh;
+    opacity: 50%;
+    right: 1vh;
+}
+.account_maincard_mid_transactions_card_bubble_control {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+/*-----------------------------Account_see_all--------------------------------*/
+.account_see_all_allcontrol{
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.account_see_all_card{
+    position: relative;
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+    border-radius: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    min-height: 70vh;
+    top: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 2vh;
+    margin-bottom: 20vh;
+}
+.account_see_all_card_top{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 2vh;
+    margin-bottom: 2vh;
+    width: 100%;
+}
+.account_see_all_card_top_go_back_button{
+    background-color: inherit;
+    border: none;
+}
+.account_see_all_card_mid{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.account_see_all_card_h1{
+    position: relative;
+    font-family: Cool;
+    margin-bottom: 0;
+    margin-left: 1vh;
+}
+.account_maincard_mid_transactions_card_bubble_date_dissapear{
+    position: relative;
+    margin-bottom: 0;
+    font-size: 2vh;
+    opacity: 0;
+    right: -10vh;
+    transition: 0.5s ease-in-out;
+}
+.account_maincard_mid_transactions_card_bubble a:hover .account_maincard_mid_transactions_card_bubble_date_dissapear{
+    right: 1vh;
+    opacity: 50%;
+}
+/*-----------------------------Edit_cards-----------------------------------*/
+.edit_local_cards_all_control {
+    display: flex;
+    width: 80%;
+    min-height: 90vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    flex-wrap: wrap;
+    overflow: visible;
+    justify-content: center;
+}
+.edit_local_cards_card{
+    position: relative;
+    top: 10vh;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    min-height: 50vh;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    border-radius: 2vh;
+}
+/*-----------------------------family_fonts-----------------------------------*/
+@font-face {
+    font-family: "Cool";
+    src: url("Overpass-SemiBold.ttf");
+    src: url("Overpass-SemiBold.ttf");
+}
+@font-face {
+    font-family: "Main";
+    src: url("Futura_Medium.ttf");
+    src: url("Futura Std Medium.ttf"),
+    url("Futura Std Medium Condensed.ttf"),
+    url("Futura TOT Medium Condensed.ttf"),
+    url("Futura URW Medium.ttf");
+}
+@font-face {
+    font-family: "Main2";
+    src: url("Futura TOT Medium Condensed.ttf");
+    src: url("Futura TOT Medium Condensed.ttf");
+}
+/*-----------------------------screen_adjust-----------------------------------*/
+@media (max-width: 500px) {
+    /*navbar*/
+    .navbar_own_img_control {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+    .navbar_own_img {
+        position: relative;
+        height: 40%;
+        width: auto;
+        cursor: pointer;
+        left: 0;
+    }
+
+    .navbar_own_buttons{
+        position: relative;
+        height: 100%;
+        width: 50%;
+        align-items: center;
+        justify-content: right;
+        display: none;
+    }
+    .navbar_own_buttons button{
+        opacity: 100%;
+        position: relative;
+        margin-right: 1%;
+        right: 30vh;
+        height: 40%;
+        width: 15%;
+        border: 0;
+        border-radius: 1.5vh;
+        font-size: 2vh;
+    }
+    .navbar_own_button1 {
+        background-color: #d9d9d9;
+        color: black;
+        transition: 0.2s;
+    }
+    .navbar_own_button2{
+        background-color: rgba(0, 0, 0, 0.85);
+        color: white;
+        transition: 0.2s;
+    }
+    .navbar_own_button1:hover{
+        filter: invert(10%);
+    }
+    /*index*/
+    .index_header h1{
+        font-family: Cool;
+        position: relative;
+        width: 100%;
+        font-size: 7vh;
+        text-align: center;
+    }
+    .index_header b{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .index_header_button button{
+        border-radius: 20px;
+        width: 70%;
+        background-color: #0678E6;
+        color: white;
+        height: 6vh;
+        border: 0;
+        font-size: 2vh;
+        transition: 0.2s;
+    }
+    .index_header p{
+        position: relative;
+        font-size: 2vh;
+        text-align: center;
+    }
+
+    .index_benefit_text1 {
+        position: relative;
+        margin-top: 5%;
+    }
+    .index_benefit h1{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        font-family: Cool;
+        font-size: 3.5vh;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+    .index_benefit p{
+        display: flex;
+        position: relative;
+        top: 20%;
+        justify-content: center;
+        opacity: 80%;
+        font-size: 2vh;
+    }
+    /*login*/
+    .login_card {
+        border-radius: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80%;
+        flex-direction: column;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    }
+
+    .index_coin_img1 {
+        position: absolute;
+        height: 10vh;
+        right: 20%;
+        bottom: 45%;
+        animation-name: coin1;
+        animation-duration: 0.7s;
+    }
+    .index_coin_img2 {
+        position: absolute;
+        height: 10vh;
+        left: 27%;
+        bottom: 57%;
+        animation-name: coin2;
+        animation-duration: 1.2s;
+    }
+    .index_coin_img3 {
+        position: absolute;
+        height: 10vh;
+        left: 20%;
+        bottom: 32%;
+        animation-name: coin3;
+        animation-duration: 1s;
+    }
+    /*register*/
+    .register_card {
+        border-radius: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80%;
+        flex-direction: column;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    }
+    .register_card h1{
+        text-align: center;
+        width: 100%;
+        font-family: Cool;
+        font-size: 5vh;
+        margin: 1%;
+    }
+
+    .index_benefit_card1 {
+        position: relative;
+        width: 100%;
+        height: 50vh;
+        background-color: #D81E5B;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    }
+    .index_benefit_card2 {
+        position: relative;
+        width: 50%;
+        height: 30vh;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+        margin-top: 2%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
+    .index_benefit_card3 {
+        position: relative;
+        width: 50%;
+        height: 30vh;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+}
